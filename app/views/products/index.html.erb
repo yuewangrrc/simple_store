@@ -3,7 +3,7 @@
 <div class="products-container">
   <% @products.each do |product| %>
     <div class="product-card">
-      <h3><%= product.title %></h3>
+      <h3><%= link_to product.title, product_path(product), class: "product-title-link" %></h3>
       <p class="description"><%= product.description %></p>
       <div class="product-details">
         <span class="price">Price: $<%= product.price %></span>

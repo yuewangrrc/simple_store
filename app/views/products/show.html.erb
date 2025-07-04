@@ -1,0 +1,26 @@
+<div class="product-show">
+  <h1><%= @product.title %></h1>
+  
+  <div class="product-details-show">
+    <div class="description-section">
+      <h3>Description</h3>
+      <p><%= @product.description %></p>
+    </div>
+    
+    <div class="pricing-section">
+      <div class="price-display">
+        <span class="price-label">Price:</span>
+        <span class="price-value">$<%= @product.price %></span>
+      </div>
+      
+      <div class="stock-display">
+        <span class="stock-label">Stock Available:</span>
+        <span class="stock-value"><%= @product.stock_quantity %> units</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="navigation">
+    <%= link_to "← Back to Products", products_path, class: "back-link" %>
+  </div>
+</div>
