@@ -1,4 +1,5 @@
 <div class="product-show">
+  <div class="category-badge-show"><%= @product.category.name %></div>
   <h1><%= @product.title %></h1>
   
   <div class="product-details-show">
@@ -8,6 +9,11 @@
     </div>
     
     <div class="pricing-section">
+      <div class="category-display">
+        <span class="category-label">Category:</span>
+        <span class="category-value"><%= @product.category.name %></span>
+      </div>
+      
       <div class="price-display">
         <span class="price-label">Price:</span>
         <span class="price-value">$<%= @product.price %></span>

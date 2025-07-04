@@ -3,6 +3,7 @@
 <div class="products-container">
   <% @products.each do |product| %>
     <div class="product-card">
+      <div class="category-badge"><%= product.category.name %></div>
       <h3><%= link_to product.title, product_path(product), class: "product-title-link" %></h3>
       <p class="description"><%= product.description %></p>
       <div class="product-details">
